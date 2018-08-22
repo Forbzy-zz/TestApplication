@@ -22,6 +22,8 @@ import java.util.concurrent.TimeUnit;
 public class WaitTests {
 
     WebDriver driver;
+    WebElement parentElement;
+    WebElement mainElement;
 
     @Before
     public void setUp() throws MalformedURLException {
@@ -67,7 +69,7 @@ public class WaitTests {
     }
 
     @Test
-    public void testFirstCalculator() {
+    public void testButton() {
 
         //Log.i("TAG", "" + driver.findElements(By.xpath("//android.widget.Button")).get(1));
 
@@ -75,26 +77,9 @@ public class WaitTests {
         driver.findElements(By.xpath("//android.widget.Button")).get(0).click();
 
 
-        // Click on Shop by Deparment link
-        driver.findElement(By.id("com.example.james.testapplication:id/checkBox")).click();
-        // Click on Main menu
-        driver.findElement(By.className("android.widget.ImageView")).click();
-        // Click on Home link under Main menu
-        driver.findElement(By.id("com.example.james.testapplication:id/toggleButton")).click();
-        // Click on Sign In link on the Home Screen
-        driver.findElement(By.id("com.example.james.testapplication:id/radioButton")).click();
 
-        // Entering UserName using Parent node strategy
-        WebElement parentElement = driver.findElement(By.name("appParentElement"));
-        List<WebElement> childElements = parentElement.findElements(By.className("android.view.TextView"));
-        WebElement mainElement = childElements.get(4);
-        mainElement.findElement(By.className("android.widget.EditText")).sendKeys("Your_UserName");
-        // Entering Password using Xpath & Sibling strategy
-        driver.findElement(By.xpath("//android.view.View[@content-desc='Password']/following-sibling::android.view.TextView/android.widget.EditText")).sendKeys("Your_Password");
-        // Click on Sign In button
-        driver.findElement(By.name("SWITCH")).click();
-
-       /* TouchAction Action = new TouchAction((MobileDriver) driver);
+        /*
+        TouchAction Action = new TouchAction((MobileDriver) driver);
         Action.tap(addbtn).perform();
 
         TouchAction action0 = new TouchAction((MobileDriver) driver);
@@ -102,20 +87,94 @@ public class WaitTests {
         action0.tap(el);
         action1 = TouchAction().tap(el);
         MultiAction().add(action0).add(action1).perform();
-*/
+        */
         // Click on number 2 button.
         //driver.findElements(By.xpath("//android.widget.Button")).get(0).click();
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
+    @Test
+    public void testCheckBox() {
+
+        // Click on Shop by Deparment link
+        driver.findElement(By.id("com.example.james.testapplication:id/checkBox")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testImageView() {
+
+        // Click on Main menu
+        driver.findElement(By.className("android.widget.ImageView")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testRadioBox() {
+
+        // Click on Sign In link on the Home Screen
+        driver.findElement(By.id("com.example.james.testapplication:id/radioButton")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testToggleBox() {
+
+        // Click on Home link under Main menu
+        driver.findElement(By.id("com.example.james.testapplication:id/toggleButton")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testSwitch() {
+
+        // Click on Home link under Main menu
+        driver.findElement(By.className("android.widget.Switch")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testEditText() {
+
+        // Click on Shop by Deparment link
+        driver.findElement(By.id("com.example.james.testapplication:id/checkBox")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testCheckedText() {
+
+        // Click on Main menu
+        driver.findElement(By.className("android.widget.ImageView")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
+    public void testRatingsBar() {
+
+        // Click on Sign In link on the Home Screen
+        driver.findElement(By.id("com.example.james.testapplication:id/radioButton")).click();
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+
+
     @After
     public void End() {
         driver.quit();
     }
 
-
- /*   @Before
+    /*
+    @Before
     public void setup() {
         System.setProperty("webdriver.chrome.driver", "exe/chromedriver.exe");
         driver = new ChromeDriver();
@@ -142,5 +201,6 @@ public class WaitTests {
         UName = driver.findElement(By.name("login_user"));
         UName.sendKeys(goodUser);
     }
-    */
+*/
+
 }

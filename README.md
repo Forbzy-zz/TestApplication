@@ -30,3 +30,9 @@ On Android Studio you can look at the Project view which will show all the files
 Then navigate through your folder structure to locate test files and open them. 
 TestApplication -> app -> src -> main -> com.example.james.testapplication -> WaitTests
 
+Ensure your Emulator is running
+Go to menu at top and click on Tools -> AVD Manager
+Then select the Nexus 5 Emulator and select the pplay button under the Actions column.
+
+Running the tests
+Click on Run from the menu from the top of the screen and Select Run -> WaitTests

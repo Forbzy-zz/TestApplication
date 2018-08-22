@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.internal.TouchAction;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -15,7 +13,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
@@ -98,7 +95,7 @@ public class WaitTests {
     public void testTextView() {
 
         // Click on Shop by Deparment link
-        driver.findElement(By.className("android.text.TextView")).sendKeys("Your_UserName");
+        driver.findElement(By.className("android.widget.TextView")).sendKeys("Your_UserName");
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -152,7 +149,7 @@ public class WaitTests {
     public void testEditText() {
 
         // Click on Shop by Deparment link
-        driver.findElement(By.id("com.example.james.testapplication:id/editText")).sendKeys("Your_UserName");
+        driver.findElement(By.className("android.widget.EditText")).sendKeys("Your_UserName");
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -161,9 +158,15 @@ public class WaitTests {
     public void testCheckedText() {
 
         // Click on Main menu
-        driver.findElement(By.className("android.widget.checkedText")).sendKeys("Your_UserName");
-
+        String string = driver.findElement(By.className("android.widget.CheckedTextView")).getText();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+        if(string == "checkedText"){
+            System.out.println( "string in checkedtext widget is " + string);
+        } else {
+            System.out.println( "string in checkedtext widget is not " + string);
+        }
+
     }
 
     @Test

@@ -16,3 +16,17 @@ Open CMD or command line
 - once open you should run the below commands without the quotes and close the terminal.
 - “cd C:\Users\Administrator\AppData\Local\Android\Sdk\tools\bin”
 - “uiautomatorviewer.bat”
+
+Create Project
+
+Go to Android Studios and click on File -> Open
+The project is located in the C:/Users/Administrator/Documents/TestApplication.
+Navigate here and click on Open.
+
+Go to https://github.com/Forbzy/TestApplication
+
+On Android Studio you can look at the Project view which will show all the files and folders in your current project. Click on Project near the top left side. 
+
+Then navigate through your folder structure to locate test files and open them. 
+TestApplication -> app -> src -> main -> com.example.james.testapplication -> WaitTests
+

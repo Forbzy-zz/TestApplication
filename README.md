@@ -1,6 +1,7 @@
 # TestApplication
 
 Username: Administrator
+
 Password: 
 
 In order to start Appium
@@ -19,20 +20,19 @@ Open CMD or command line
 
 Create Project
 
-Go to Android Studios and click on File -> Open
-The project is located in the C:/Users/Administrator/Documents/TestApplication.
-Navigate here and click on Open.
+- Go to Android Studios and click on File -> Open
+- The project is located in the `C:/Users/Administrator/Documents/TestApplication.`
+- Navigate here and click on Open.
 
-Go to https://github.com/Forbzy/TestApplication
-
-On Android Studio you can look at the Project view which will show all the files and folders in your current project. Click on Project near the top left side. 
-
-Then navigate through your folder structure to locate test files and open them. 
-TestApplication -> app -> src -> main -> com.example.james.testapplication -> WaitTests
+Check Test script
+- On Android Studio you can look at the Project view which will show all the files and folders in your current project. 
+- Click on Project near the top left side. 
+-Then navigate through your folder structure to locate test files and open them. 
+- TestApplication -> app -> src -> main -> com.example.james.testapplication -> WaitTests
 
 Ensure your Emulator is running
-Go to menu at top and click on Tools -> AVD Manager
-Then select the Nexus 5 Emulator and select the pplay button under the Actions column.
+- Go to menu at top and click on Tools -> AVD Manager
+- Then select the Nexus 5 Emulator and select the pplay button under the Actions column.
 
 Running the tests
-Click on Run from the menu from the top of the screen and Select Run -> WaitTests
+- Click on Run from the menu from the top of the screen and Select Run -> WaitTests

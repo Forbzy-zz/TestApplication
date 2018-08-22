@@ -95,6 +95,15 @@ public class WaitTests {
     }
 
     @Test
+    public void testTextView() {
+
+        // Click on Shop by Deparment link
+        driver.findElement(By.className("android.text.TextView")).sendKeys("Your_UserName");
+
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    @Test
     public void testCheckBox() {
 
         // Click on Shop by Deparment link
@@ -143,7 +152,7 @@ public class WaitTests {
     public void testEditText() {
 
         // Click on Shop by Deparment link
-        driver.findElement(By.id("com.example.james.testapplication:id/checkBox")).click();
+        driver.findElement(By.id("com.example.james.testapplication:id/editText")).sendKeys("Your_UserName");
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -152,7 +161,7 @@ public class WaitTests {
     public void testCheckedText() {
 
         // Click on Main menu
-        driver.findElement(By.className("android.widget.ImageView")).click();
+        driver.findElement(By.className("android.widget.checkedText")).sendKeys("Your_UserName");
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
@@ -161,7 +170,7 @@ public class WaitTests {
     public void testRatingsBar() {
 
         // Click on Sign In link on the Home Screen
-        driver.findElement(By.id("com.example.james.testapplication:id/radioButton")).click();
+        driver.findElement(By.id("com.example.james.testapplication:id/ratingBar")).click();
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
